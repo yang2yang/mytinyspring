@@ -11,11 +11,46 @@ public class BeanDefinition {
 
     private Object bean;
 
-    public BeanDefinition(Object bean){
-        this.bean = bean;
+    /**
+     * 开始封装一些Object中的beanClass等信息
+     */
+    private Class beanClass;
+
+    /**
+     * 应该是类的绝对路径的信息，但是是不是Class中也存放了这个信息呢
+     */
+    private String beanClassName;
+
+    public BeanDefinition() {
     }
 
-    public Object getBean(){
+
+    public Class getBeanClass() {
+        return beanClass;
+    }
+
+    public void setBeanClass(Class beanClass) {
+        this.beanClass = beanClass;
+    }
+
+    public String getBeanClassName() {
+        return beanClassName;
+    }
+
+    public void setBeanClassName(String beanClassName) {
+        this.beanClassName = beanClassName;
+        try{
+            this.beanClass = Class.forName(beanClassName);
+        }catch (ClassNotFoundException e){
+            e.printStackTrace();
+        }
+    }
+
+    public Object getBean() {
         return bean;
+    }
+
+    public void setBean(Object bean) {
+        this.bean = bean;
     }
 }
