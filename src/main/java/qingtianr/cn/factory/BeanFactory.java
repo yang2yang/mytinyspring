@@ -17,5 +17,5 @@ public interface BeanFactory {
     /**
      * 注册Bean  普通对象被封装到BeanDefinition中
      */
-    public void registerBeanDefinition(String name, BeanDefinition beanDefinition);
+    public void registerBeanDefinition(String name, BeanDefinition beanDefinition) throws Exception;
 }

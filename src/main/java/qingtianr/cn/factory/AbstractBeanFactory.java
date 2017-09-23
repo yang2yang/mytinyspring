@@ -25,12 +25,12 @@ public abstract class AbstractBeanFactory implements BeanFactory{
     }
 
     @Override
-    public void registerBeanDefinition(String name, BeanDefinition beanDefinition) {
+    public void registerBeanDefinition(String name, BeanDefinition beanDefinition) throws Exception {
         //应该吧BeanDefinition这个对象的构造函数改掉了，所以将Test外面的new操作，移动到这个doCreateBean里面来了
         Object bean = doCreateBean(beanDefinition);
         beanDefinition.setBean(bean);
         concurrentHashMap.put(name,beanDefinition);
     }
 
-    protected abstract Object doCreateBean(BeanDefinition beanDefinition);
+    protected abstract Object doCreateBean(BeanDefinition beanDefinition) throws Exception;
 }

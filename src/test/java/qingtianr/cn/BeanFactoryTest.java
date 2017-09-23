@@ -10,7 +10,7 @@ import qingtianr.cn.factory.BeanFactory;
 public class BeanFactoryTest {
 
     @Test
-    public void Test(){
+    public void Test() throws Exception {
         //1.初始化BeanFactory对象
         BeanFactory beanFactory = new AutowireCapableBeanFactory();
 
@@ -18,6 +18,13 @@ public class BeanFactoryTest {
         BeanDefinition beanDefinition = new BeanDefinition();
         //虽然将new操作通过反射给放入到厘米了，但是这里还是需要显示地传入类的全路径名字
         beanDefinition.setBeanClassName("qingtianr.cn.HelloWorldService");
+
+        PropertyValue propertyValue = new PropertyValue("text","hello worldddddd!");
+        PropertyValues propertyValues = new PropertyValues();
+        propertyValues.addPropertyValue(propertyValue);
+        beanDefinition.setPropertyValues(propertyValues);
+
+        //注入Bean
         beanFactory.registerBeanDefinition("helloworldservice",beanDefinition);
 
         //3.获取Bean
