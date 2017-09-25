@@ -7,11 +7,21 @@ public class HelloWorldService {
 
     private String text;
 
+    private OutputService outputService;
+
     public void helloworld(){
-        System.out.println(text);
+        outputService.output(text);
     }
 
     public void setText(String text) {
         this.text = text;
+    }
+
+    public OutputService getOutputService() {
+        return outputService;
+    }
+
+    public void setOutputService(OutputService outputService) {
+        this.outputService = outputService;
     }
 }

@@ -21,11 +21,14 @@ public class BeanDefinition {
      */
     private String beanClassName;
 
-    private PropertyValues propertyValues;
+    /**
+     * 之前没发现,而且没有测试，这个版本测试了，就发现少了这一步
+     * 这个肯定是在new的时候就会创建出来了，但是如果使用反射呢,而且和构造函数的区别有吗
+     */
+    private PropertyValues propertyValues = new PropertyValues();
 
     public BeanDefinition() {
     }
-
 
     public Class getBeanClass() {
         return beanClass;

@@ -11,7 +11,7 @@ public interface BeanFactory {
      * 获得Bean的接口
      * @return
      */
-    public Object getBean(String name);
+    public Object getBean(String name) throws Exception;
 
 
     /**
