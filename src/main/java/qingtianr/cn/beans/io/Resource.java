@@ -1,4 +1,4 @@
-package qingtianr.cn.io;
+package qingtianr.cn.beans.io;
 
 import java.io.IOException;
 import java.io.InputStream;

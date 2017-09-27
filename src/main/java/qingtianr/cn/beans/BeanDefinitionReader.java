@@ -1,4 +1,4 @@
-package qingtianr.cn;
+package qingtianr.cn.beans;
 
 /**
  * Created by jack on 2017/9/24.

@@ -1,8 +1,8 @@
-package qingtianr.cn.factory;
+package qingtianr.cn.beans.factory;
 
-import qingtianr.cn.BeanDefinition;
+import qingtianr.cn.beans.BeanDefinition;
 import qingtianr.cn.BeanReference;
-import qingtianr.cn.PropertyValue;
+import qingtianr.cn.beans.PropertyValue;
 
 import java.lang.reflect.Field;
 

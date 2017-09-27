@@ -1,4 +1,4 @@
-package qingtianr.cn;
+package qingtianr.cn.beans;
 
 import java.util.ArrayList;
 import java.util.List;

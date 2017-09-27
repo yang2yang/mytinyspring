@@ -1,6 +1,6 @@
-package qingtianr.cn.factory;
+package qingtianr.cn.beans.factory;
 
-import qingtianr.cn.BeanDefinition;
+import qingtianr.cn.beans.BeanDefinition;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -12,6 +12,7 @@ import java.util.concurrent.ConcurrentHashMap;
  */
 
 /**
+ * bean的工厂
  * 将取出Bean   注入Bean给抽象出来
  * 实现类实现doCreateBean方式,但是如果只有一个实现类，那么其实意义也不是非常大
  */
@@ -47,11 +48,11 @@ public abstract class AbstractBeanFactory implements BeanFactory {
 
     /**
      * 因为是懒加载，所以这里原来注册的时候就初始化bean的操作，放入了getBean中
+     * 不知道为什么在接口中把这个函数给删掉
      * @param name
      * @param beanDefinition
      * @throws Exception
      */
-    @Override
     public void registerBeanDefinition(String name, BeanDefinition beanDefinition) throws Exception {
         beanDefinitionMap.put(name, beanDefinition);
         beanDefinitionNames.add(name);

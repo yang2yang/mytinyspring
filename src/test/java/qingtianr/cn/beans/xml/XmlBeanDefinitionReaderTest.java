@@ -1,9 +1,9 @@
-package qingtianr.cn.xml;
+package qingtianr.cn.beans.xml;
 
 import org.junit.Assert;
 import org.junit.Test;
-import qingtianr.cn.BeanDefinition;
-import qingtianr.cn.io.ResourceLoader;
+import qingtianr.cn.beans.BeanDefinition;
+import qingtianr.cn.beans.io.ResourceLoader;
 
 import java.util.Map;
 

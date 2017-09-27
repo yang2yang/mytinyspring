@@ -1,7 +1,7 @@
-package qingtianr.cn;
+package qingtianr.cn.beans;
 
 
-import qingtianr.cn.io.ResourceLoader;
+import qingtianr.cn.beans.io.ResourceLoader;
 
 import java.util.HashMap;
 import java.util.Map;

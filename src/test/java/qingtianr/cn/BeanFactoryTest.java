@@ -1,11 +1,13 @@
 package qingtianr.cn;
 
 import org.junit.Test;
-import qingtianr.cn.factory.AbstractBeanFactory;
-import qingtianr.cn.factory.AutowireCapableBeanFactory;
-import qingtianr.cn.factory.BeanFactory;
-import qingtianr.cn.io.ResourceLoader;
-import qingtianr.cn.xml.XmlBeanDefinitionReader;
+import qingtianr.cn.beans.AbstractBeanDefinitionReader;
+import qingtianr.cn.beans.BeanDefinition;
+import qingtianr.cn.beans.factory.AbstractBeanFactory;
+import qingtianr.cn.beans.factory.AutowireCapableBeanFactory;
+import qingtianr.cn.beans.factory.BeanFactory;
+import qingtianr.cn.beans.io.ResourceLoader;
+import qingtianr.cn.beans.xml.XmlBeanDefinitionReader;
 
 import java.util.Map;
 
@@ -28,7 +30,7 @@ public class BeanFactoryTest {
 
         //2.初始化BeanFactory并注册bean
         //这里果然有一个过程就是将xml里面的东西放入到factory中
-        BeanFactory beanFactory = new AutowireCapableBeanFactory();
+        AbstractBeanFactory beanFactory = new AutowireCapableBeanFactory();
         for (Map.Entry<String, BeanDefinition> beanDefinitionEntry : xmlBeanDefinitionReader.getRegistry().entrySet()) {
             beanFactory.registerBeanDefinition(beanDefinitionEntry.getKey(),beanDefinitionEntry.getValue());
         }

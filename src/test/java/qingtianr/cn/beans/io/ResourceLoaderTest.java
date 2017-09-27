@@ -1,4 +1,4 @@
-package qingtianr.cn.io;
+package qingtianr.cn.beans.io;
 
 import org.junit.Assert;
 import org.junit.Test;

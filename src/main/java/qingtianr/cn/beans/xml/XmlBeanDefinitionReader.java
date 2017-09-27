@@ -1,14 +1,14 @@
-package qingtianr.cn.xml;
+package qingtianr.cn.beans.xml;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
-import qingtianr.cn.AbstractBeanDefinitionReader;
-import qingtianr.cn.BeanDefinition;
+import qingtianr.cn.beans.AbstractBeanDefinitionReader;
+import qingtianr.cn.beans.BeanDefinition;
 import qingtianr.cn.BeanReference;
-import qingtianr.cn.PropertyValue;
-import qingtianr.cn.io.ResourceLoader;
+import qingtianr.cn.beans.PropertyValue;
+import qingtianr.cn.beans.io.ResourceLoader;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
