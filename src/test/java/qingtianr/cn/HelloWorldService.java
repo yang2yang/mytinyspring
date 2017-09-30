@@ -1,27 +1,11 @@
 package qingtianr.cn;
 
 /**
- * Created by jack on 2017/9/23.
+ * Created by jack on 2017/9/27.
  */
-public class HelloWorldService {
+public interface HelloWorldService {
 
-    private String text;
+    void helloworld();
 
-    private OutputService outputService;
-
-    public void helloworld(){
-        outputService.output(text);
-    }
-
-    public void setText(String text) {
-        this.text = text;
-    }
-
-    public OutputService getOutputService() {
-        return outputService;
-    }
-
-    public void setOutputService(OutputService outputService) {
-        this.outputService = outputService;
-    }
+//    void getOutputService();
 }

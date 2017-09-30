@@ -12,7 +12,8 @@
         <property name="helloWorldService" ref="helloWorldService"></property>
     </bean>
 
-    <bean name="helloWorldService" class="qingtianr.cn.HelloWorldService">
+    <!--其实这里就可以知道，以前这里一直不理解为什么是用接口来进行接收，但是这里必须是要写上实现类的-->
+    <bean name="helloWorldService" class="qingtianr.cn.HelloWorldServiceImpl">
         <property name="text" value="Hello value!!!!!"/>
         <property name="outputService" ref="outputService"/>
     </bean>

@@ -39,13 +39,13 @@ public class BeanFactoryTest {
         //这里好像有循环依赖的问题啊
         HelloWorldService helloWorldService = (HelloWorldService) beanFactory.getBean("helloWorldService");
         helloWorldService.helloworld();
-        System.out.println("1" + (helloWorldService.getOutputService() == null));
-        System.out.println("2" + (helloWorldService.getOutputService().getHelloWorldService() == null));
-        System.out.println("3" + (helloWorldService.getOutputService().getHelloWorldService().getOutputService() == null));
-        OutputService outputService = (OutputService) beanFactory.getBean("outputService");
-        System.out.println("out1" + (outputService.getHelloWorldService() == null));
-        System.out.println("out2" + (outputService.getHelloWorldService().getOutputService() == null));
-        System.out.println("out3" + (outputService.getHelloWorldService().getOutputService().getHelloWorldService() == null));
+//        System.out.println("1" + (helloWorldService.getOutputService() == null));
+//        System.out.println("2" + (helloWorldService.getOutputService().getHelloWorldService() == null));
+//        System.out.println("3" + (helloWorldService.getOutputService().getHelloWorldService().getOutputService() == null));
+//        OutputService outputService = (OutputService) beanFactory.getBean("outputService");
+//        System.out.println("out1" + (outputService.getHelloWorldService() == null));
+//        System.out.println("out2" + (outputService.getHelloWorldService().getOutputService() == null));
+//        System.out.println("out3" + (outputService.getHelloWorldService().getOutputService().getHelloWorldService() == null));
     }
 
     /**
